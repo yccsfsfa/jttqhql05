@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jttqhql05
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jttqhql05
+  template:
+    metadata:
+      labels:
+        app: jttqhql05
+    spec:
+      containers:
+      - image: okteto.dev/jttqhql05:latest
+        name: jttqhql05
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: Site
+          value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
+        - name: Vless_UUID
+          value: "6d424e5c-0cce-4d32-9a3c-64941a85f812"
+        - name: Vless_Path
+          value: "/fgu41346rgjyu"
+        - name: Vmess_UUID
+          value: "6d424e5c-0cce-4d32-9a3c-64941a85f812"
+        - name: Vmess_Path
+          value: "/fdb041475uehtd"
+        - name: Share_Path
+          value: "/v2link"
